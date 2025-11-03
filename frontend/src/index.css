@@ -1,0 +1,150 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 1rem; /* balanced base size */
+  line-height: 1.7;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.92);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: inherit;
+  text-align: center;
+}
+
+/* Content Wrapper */
+.wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  box-sizing: border-box;
+}
+
+/* ===== Navigation Bar ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Logo left, links right */
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1a1a1a;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* Navbar Links Container */
+.nav-links {
+  display: flex;
+  gap: 2rem; /* proper spacing between links */
+}
+
+/* Individual Links */
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem; /* slightly reduced for better fit */
+  letter-spacing: 0.3px;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar a:hover,
+.navbar a:focus {
+  background-color: #646cff;
+  color: #fff;
+  transform: scale(1.05);
+  outline: none;
+}
+
+/* Global Link Styling */
+a {
+  font-weight: 600;
+  color: #646cff;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #535bf2;
+  text-decoration: underline;
+}
+
+/* Headings */
+h1 {
+  font-size: 2.6rem;
+  line-height: 1.3;
+  margin-bottom: 0.8em;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.6em;
+}
+
+h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.4em;
+}
+
+/* Buttons */
+button {
+  margin: 0.5rem;
+  padding: 0.7rem 1.4rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, #646cff, #535bf2);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover,
+button:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+button:focus-visible {
+  outline: 3px solid #ffd700;
+  outline-offset: 3px;
+}
+
+/* Light Mode Overrides */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover,
+  a:focus {
+    color: #747bff;
+  }
+
+  .navbar {
+    background-color: #f8f8f8;
+  }
+
+  button {
+    background: linear-gradient(135deg, #4b6cff, #3a52e3);
+  }
+}
